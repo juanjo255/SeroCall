@@ -305,13 +305,13 @@ for round in range(1, 101):
 
         if sidx in debug_serolist:
             #print tr
-            print tu
+            print (tu)
             cnt = 0.0
             for (i, t) in enumerate(tr):
-                print i, t, cnt
+                print (i, t, cnt)
                 cnt += t[1]
-            print "Round %d, %s - ratioR=%.5f  ratioU=%.5f   UvsR=%.4f  finalRatio=%.5f  %.5f -> %.5f (%.5f)" % (round, serotypes[sidx], ratioR, ratioU, UvsRratio, finalRatio, origF, F[sidx], newF)
-            print "--------------------------------------------------"
+            print ("Round %d, %s - ratioR=%.5f  ratioU=%.5f   UvsR=%.4f  finalRatio=%.5f  %.5f -> %.5f (%.5f)" % (round, serotypes[sidx], ratioR, ratioU, UvsRratio, finalRatio, origF, F[sidx], newF))
+            print ("--------------------------------------------------")
 
     # Stop if nothing has changed.
 
@@ -357,7 +357,7 @@ for key, groupiter in groupby(snpGroupBins, lambda x: x[0]):
         if ER == 0:
             continue
 
-        print snpGroup, serotypes[sidx], bidx, ER, EU, OR[bidx], OU[bidx]
+        print (snpGroup, serotypes[sidx], bidx, ER, EU, OR[bidx], OU[bidx])
 
         ratio = 0.0
         if EU > 0:
